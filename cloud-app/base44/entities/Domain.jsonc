@@ -1,0 +1,75 @@
+{
+  "name": "Domain",
+  "type": "object",
+  "properties": {
+    "domain_name": {
+      "type": "string"
+    },
+    "domain_fingerprint": {
+      "type": "string"
+    },
+    "api_key": {
+      "type": "string"
+    },
+    "owner_name": {
+      "type": "string"
+    },
+    "owner_email": {
+      "type": "string"
+    },
+    "subscription_tier": {
+      "type": "string",
+      "enum": [
+        "free",
+        "starter",
+        "pro",
+        "business"
+      ],
+      "default": "free"
+    },
+    "fix_count_used": {
+      "type": "number",
+      "default": 0
+    },
+    "fix_count_limit": {
+      "type": "number",
+      "default": 3
+    },
+    "stripe_customer_id": {
+      "type": "string"
+    },
+    "stripe_subscription_id": {
+      "type": "string"
+    },
+    "subscription_status": {
+      "type": "string",
+      "enum": [
+        "none",
+        "active",
+        "cancelled",
+        "past_due"
+      ],
+      "default": "none"
+    },
+    "wp_version": {
+      "type": "string"
+    },
+    "php_version": {
+      "type": "string"
+    },
+    "active_theme": {
+      "type": "string"
+    },
+    "active_plugins": {
+      "type": "string"
+    },
+    "last_active": {
+      "type": "string",
+      "format": "date-time"
+    }
+  },
+  "required": [
+    "domain_name",
+    "owner_email"
+  ]
+}

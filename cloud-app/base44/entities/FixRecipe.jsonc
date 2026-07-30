@@ -1,0 +1,94 @@
+{
+  "name": "FixRecipe",
+  "type": "object",
+  "properties": {
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string"
+    },
+    "category": {
+      "type": "string",
+      "enum": [
+        "css",
+        "settings",
+        "content",
+        "database",
+        "other"
+      ],
+      "default": "other"
+    },
+    "fix_template": {
+      "type": "string"
+    },
+    "wp_version_range": {
+      "type": "string"
+    },
+    "plugin_name": {
+      "type": "string"
+    },
+    "plugin_version_range": {
+      "type": "string"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "draft",
+        "verified",
+        "deprecated"
+      ],
+      "default": "draft"
+    },
+    "success_count": {
+      "type": "number",
+      "default": 0
+    },
+    "failure_count": {
+      "type": "number",
+      "default": 0
+    },
+    "total_count": {
+      "type": "number",
+      "default": 0
+    },
+    "tags": {
+      "type": "string"
+    },
+    "builder_type": {
+      "type": "string",
+      "enum": [
+        "elementor",
+        "divi",
+        "beaver_builder",
+        "brizy",
+        "siteorigin",
+        "thrust",
+        "gutenberg",
+        "unknown",
+        ""
+      ],
+      "default": "unknown"
+    },
+    "theme_name": {
+      "type": "string",
+      "description": "Theme this recipe is optimized for (empty = any)"
+    },
+    "setup_tags": {
+      "type": "string",
+      "description": "JSON array of tags for matching: builder, theme key, fix type keywords"
+    },
+    "failed_approaches": {
+      "type": "string",
+      "description": "JSON array of change_type strings that failed for this setup type"
+    },
+    "effective_approach": {
+      "type": "string",
+      "description": "The change_type that actually worked (verified)"
+    }
+  },
+  "required": [
+    "title",
+    "category"
+  ]
+}

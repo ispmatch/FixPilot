@@ -1,0 +1,33 @@
+{
+  "name": "ChatSession",
+  "type": "object",
+  "properties": {
+    "domain_id": {
+      "type": "string"
+    },
+    "domain_name": {
+      "type": "string"
+    },
+    "user_email": {
+      "type": "string"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "active",
+        "closed"
+      ],
+      "default": "active"
+    },
+    "site_context": {
+      "type": "string"
+    },
+    "title": {
+      "type": "string",
+      "description": "First user message, truncated \u2014 used as session label in history"
+    }
+  },
+  "required": [
+    "domain_name"
+  ]
+}

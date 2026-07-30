@@ -1,0 +1,45 @@
+{
+  "name": "NotificationChannel",
+  "type": "object",
+  "properties": {
+    "domain_id": {
+      "type": "string"
+    },
+    "domain_name": {
+      "type": "string"
+    },
+    "channel_type": {
+      "type": "string",
+      "enum": [
+        "slack",
+        "discord",
+        "email",
+        "webhook"
+      ],
+      "default": "slack"
+    },
+    "webhook_url": {
+      "type": "string"
+    },
+    "channel_name": {
+      "type": "string"
+    },
+    "events": {
+      "type": "string",
+      "description": "JSON array of event types: fix_applied, fix_reverted, verification_passed, verification_failed, vulnerability_found, site_down, audit_change"
+    },
+    "is_active": {
+      "type": "boolean",
+      "default": true
+    },
+    "last_triggered": {
+      "type": "string",
+      "format": "date-time"
+    }
+  },
+  "required": [
+    "domain_name",
+    "channel_type",
+    "webhook_url"
+  ]
+}

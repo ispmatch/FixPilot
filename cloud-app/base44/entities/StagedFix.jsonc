@@ -1,0 +1,60 @@
+{
+  "name": "StagedFix",
+  "type": "object",
+  "properties": {
+    "domain_id": {
+      "type": "string"
+    },
+    "domain_name": {
+      "type": "string"
+    },
+    "fix_execution_id": {
+      "type": "string"
+    },
+    "fix_description": {
+      "type": "string"
+    },
+    "staging_url": {
+      "type": "string",
+      "description": "URL of the temporary staging preview"
+    },
+    "preview_token": {
+      "type": "string",
+      "description": "Auth token to access the private staging preview"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "creating",
+        "ready",
+        "testing",
+        "approved",
+        "rejected",
+        "expired",
+        "error"
+      ],
+      "default": "creating"
+    },
+    "staging_config": {
+      "type": "string",
+      "description": "JSON snapshot of staging environment configuration"
+    },
+    "verification_result": {
+      "type": "string",
+      "description": "JSON results of verification checks run on staging"
+    },
+    "expires_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "merged_to_live": {
+      "type": "boolean",
+      "default": false
+    }
+  },
+  "required": [
+    "domain_name",
+    "fix_description",
+    "status"
+  ]
+}

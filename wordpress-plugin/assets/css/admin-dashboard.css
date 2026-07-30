@@ -1,0 +1,93 @@
+.fixpilot-admin-wrap{max-width:920px;margin:20px 20px 40px 0;background:#0D1117;border:1px solid #30363D;border-radius:10px;font-family:-apple-system,system-ui,'Inter',sans-serif;color:#E6EDF3;overflow:hidden}
+.fixpilot-admin-banner{width:100%;overflow:hidden;background:#0D1117;border-bottom:1px solid #30363D}
+.fixpilot-admin-banner-img{width:100%;max-height:48px;object-fit:cover;object-position:left center;display:block}
+.fixpilot-admin-header{display:flex;align-items:center;justify-content:space-between;padding:20px 24px;background:#161B22;border-bottom:1px solid #30363D}
+.fixpilot-admin-logo{font-size:20px;font-weight:700;color:#00C9A7;letter-spacing:-0.5px;display:flex;align-items:center;gap:8px}
+.fixpilot-admin-logo-icon{width:28px;height:28px;border-radius:6px}
+.fixpilot-admin-tagline{font-size:12px;color:#8B949E;margin-top:2px}
+.fixpilot-status-badge{font-size:12px;font-weight:600;padding:4px 10px;border-radius:12px}
+.fixpilot-status-connected{color:#00C9A7;background:rgba(0,201,167,0.1)}
+.fixpilot-status-pending{color:#F0B429;background:rgba(240,180,41,0.1)}
+.fixpilot-admin-tabs{display:flex;border-bottom:1px solid #30363D;background:#161B22}
+.fixpilot-tab{padding:12px 20px;background:transparent;border:none;color:#8B949E;font-size:13px;font-weight:500;cursor:pointer;border-bottom:2px solid transparent;transition:all .2s;font-family:inherit}
+.fixpilot-tab:hover{color:#E6EDF3;background:rgba(255,255,255,0.03)}
+.fixpilot-tab.active{color:#00C9A7;border-bottom-color:#00C9A7}
+.fixpilot-tab-content{display:none;padding:24px}
+.fixpilot-tab-content.active{display:block}
+.fixpilot-stats-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-bottom:24px}
+.fixpilot-stat-card{background:#161B22;border:1px solid #30363D;border-radius:8px;padding:16px}
+.fixpilot-stat-label{font-size:10px;text-transform:uppercase;letter-spacing:.5px;color:#8B949E;margin-bottom:6px}
+.fixpilot-stat-value{font-size:18px;font-weight:700;color:#E6EDF3}
+.fixpilot-stat-plan{color:#00C9A7;text-transform:capitalize}
+.fixpilot-stat-email{font-size:13px;word-break:break-all}
+.fixpilot-stat-bar{height:4px;background:#30363D;border-radius:2px;margin-top:8px;overflow:hidden}
+.fixpilot-stat-bar-fill{height:100%;background:#00C9A7;border-radius:2px;transition:width .3s ease}
+.fixpilot-info-section{margin-bottom:24px}
+.fixpilot-section-title{font-size:13px;font-weight:600;color:#E6EDF3;margin-bottom:12px}
+.fixpilot-info-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
+.fixpilot-info-item{background:#161B22;border:1px solid #30363D;border-radius:8px;padding:12px 16px;display:flex;flex-direction:column;gap:4px}
+.fixpilot-info-label{font-size:10px;text-transform:uppercase;letter-spacing:.5px;color:#8B949E}
+.fixpilot-info-value{font-size:13px;color:#E6EDF3;font-weight:500}
+.fixpilot-cta-section{background:#161B22;border:1px solid #30363D;border-radius:8px;padding:20px;text-align:center}
+.fixpilot-cta-note{font-size:12px;color:#8B949E;margin-top:8px}
+.fixpilot-btn{display:inline-block;padding:8px 20px;border-radius:6px;font-size:13px;font-weight:600;cursor:pointer;border:none;font-family:inherit;transition:all .2s;text-decoration:none}
+.fixpilot-btn-primary{background:#00C9A7;color:#0D1117}
+.fixpilot-btn-primary:hover{background:#00B89A}
+.fixpilot-btn-secondary{background:transparent;color:#8B949E;border:1px solid #30363D}
+.fixpilot-btn-secondary:hover{color:#E6EDF3;border-color:#484F58}
+.fixpilot-btn:disabled{opacity:.5;cursor:not-allowed}
+.fixpilot-plans-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.fixpilot-plan-card{background:#161B22;border:1px solid #30363D;border-radius:8px;padding:20px;display:flex;flex-direction:column;position:relative}
+.fixpilot-plan-card.popular{border-color:rgba(0,201,167,0.4);box-shadow:0 0 20px -5px rgba(0,201,167,0.2)}
+.fixpilot-plan-badge{position:absolute;top:-10px;left:50%;transform:translateX(-50%);background:#00C9A7;color:#0D1117;font-size:10px;font-weight:700;padding:2px 10px;border-radius:10px}
+.fixpilot-plan-name{font-size:14px;font-weight:700;color:#E6EDF3}
+.fixpilot-plan-price{font-size:28px;font-weight:700;color:#E6EDF3;margin-top:4px}
+.fixpilot-plan-period{font-size:12px;color:#8B949E;font-weight:400}
+.fixpilot-plan-fixes{font-size:12px;color:#00C9A7;font-weight:600;margin-top:4px}
+.fixpilot-plan-features{list-style:none;padding:0;margin:16px 0 0;flex:1}
+.fixpilot-plan-features li{font-size:12px;color:#8B949E;padding:4px 0;display:flex;align-items:start;gap:6px}
+.fixpilot-plan-features li::before{content:'\\2713';color:#00C9A7;font-weight:700;flex-shrink:0}
+.fixpilot-plan-btn{margin-top:16px;width:100%;text-align:center}
+.fixpilot-history-list{display:flex;flex-direction:column;gap:12px}
+.fixpilot-history-item{background:#161B22;border:1px solid #30363D;border-radius:8px;padding:16px}
+.fixpilot-history-item-header{display:flex;align-items:center;justify-content:space-between;margin-bottom:8px;gap:12px}
+.fixpilot-history-item-desc{font-size:14px;font-weight:600;color:#E6EDF3;flex:1}
+.fixpilot-history-item-meta{display:flex;gap:8px;align-items:center;flex-shrink:0}
+.fixpilot-history-badge{font-size:10px;font-weight:600;padding:2px 8px;border-radius:4px;text-transform:uppercase}
+.fixpilot-history-badge.applied{color:#00C9A7;background:rgba(0,201,167,0.1)}
+.fixpilot-history-badge.reverted{color:#F0B429;background:rgba(240,180,41,0.1)}
+.fixpilot-history-badge.failed{color:#FF3E30;background:rgba(255,62,48,0.1)}
+.fixpilot-history-badge.passed{color:#00C9A7;background:rgba(0,201,167,0.05)}
+.fixpilot-history-badge.pending{color:#8B949E;background:rgba(139,144,158,0.1)}
+.fixpilot-history-badge.manual{color:#8B949E;background:rgba(139,144,158,0.1)}
+.fixpilot-history-badge.skipped{color:#8B949E;background:rgba(139,144,158,0.1)}
+.fixpilot-history-item-date{font-size:11px;color:#8B949E;margin-top:4px}
+.fixpilot-history-empty{text-align:center;padding:40px;color:#8B949E;font-size:14px}
+.fixpilot-settings-form{max-width:600px}
+.fixpilot-settings-form .form-table{border-collapse:collapse}
+.fixpilot-settings-form .form-table th{color:#8B949E;font-weight:500;padding:12px 0;text-align:left;width:180px;vertical-align:top}
+.fixpilot-settings-form .form-table td{padding:12px 0}
+.fixpilot-input{width:100%;max-width:400px;background:#0D1117;border:1px solid #30363D;border-radius:6px;padding:8px 12px;color:#E6EDF3;font-size:13px;font-family:inherit}
+.fixpilot-input:focus{outline:none;border-color:#00C9A7}
+.fixpilot-input-help{font-size:12px;color:#8B949E;margin-top:4px}
+.fixpilot-code{display:inline-block;background:#0D1117;border:1px solid #30363D;border-radius:4px;padding:4px 8px;font-size:12px;font-family:'JetBrains Mono',monospace;color:#00C9A7;word-break:break-all}
+.fixpilot-notice{padding:12px 16px;border-radius:8px;margin-bottom:16px;font-size:13px;display:flex;align-items:center;gap:8px}
+.fixpilot-notice-success{background:rgba(0,201,167,0.1);border:1px solid rgba(0,201,167,0.3);color:#00C9A7}
+.fixpilot-notice-warning{background:rgba(240,180,41,0.1);border:1px solid rgba(240,180,41,0.3);color:#F0B429}
+.fixpilot-notice-error{background:rgba(255,62,48,0.1);border:1px solid rgba(255,62,48,0.3);color:#FF3E30}
+.fixpilot-loading-text{text-align:center;padding:40px;color:#8B949E;font-size:14px}
+.fixpilot-spinner{display:inline-block;width:14px;height:14px;border:2px solid #30363D;border-top:2px solid #00C9A7;border-radius:50%;animation:fixpilot-spin .8s linear infinite;vertical-align:middle;margin-right:6px}
+@keyframes fixpilot-spin{0%{transform:rotate(0deg)}100%{transform:rotate(360deg)}}
+@media(max-width:782px){.fixpilot-stats-grid{grid-template-columns:repeat(2,1fr)}.fixpilot-plans-grid{grid-template-columns:1fr}.fixpilot-info-grid{grid-template-columns:1fr}}
+.fixpilot-learning-card{background:#161B22;border:1px solid #30363D;border-radius:8px;padding:16px;margin-bottom:24px;transition:opacity .3s}
+.fixpilot-learning-header{display:flex;align-items:center;gap:12px;margin-bottom:12px}
+.fixpilot-learning-icon{font-size:22px;line-height:1}
+.fixpilot-learning-title{font-size:14px;font-weight:600;color:#E6EDF3}
+.fixpilot-learning-step{font-size:12px;color:#8B949E;margin-top:2px}
+.fixpilot-learning-bar{height:8px;background:#30363D;border-radius:4px;overflow:hidden}
+.fixpilot-learning-bar-fill{height:100%;background:linear-gradient(90deg,#00C9A7,#6B4FBB);border-radius:4px;transition:width .5s ease;background-size:200% 100%;animation:fixpilot-learn-shimmer 2s linear infinite}
+@keyframes fixpilot-learn-shimmer{0%{background-position:0% 0}100%{background-position:-200% 0}}
+.fixpilot-learning-meta{font-size:11px;color:#8B949E;margin-top:8px}
+.fixpilot-learning-eta{font-size:11px;color:#00C9A7;margin-top:4px;font-weight:500}
+.fixpilot-learning-complete .fixpilot-learning-bar-fill{background:#00C9A7;animation:none}
+.fixpilot-learning-complete .fixpilot-learning-icon{color:#00C9A7}

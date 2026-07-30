@@ -1,0 +1,118 @@
+{
+  "name": "PluginCapability",
+  "type": "object",
+  "properties": {
+    "plugin_slug": {
+      "type": "string",
+      "description": "Machine slug e.g. woocommerce, elementor, contact-form-7"
+    },
+    "plugin_name": {
+      "type": "string",
+      "description": "Human-readable plugin name"
+    },
+    "structural_category": {
+      "type": "string",
+      "enum": [
+        "builder",
+        "ecommerce",
+        "forms",
+        "seo",
+        "custom_data",
+        "security",
+        "performance",
+        "communication",
+        "media",
+        "general"
+      ],
+      "default": "general",
+      "description": "Which of the 9 structural stack categories this capability belongs to (platform-agnostic)"
+    },
+    "capability_type": {
+      "type": "string",
+      "enum": [
+        "rest_endpoint",
+        "option_key",
+        "hook",
+        "shortcode",
+        "class_method",
+        "database_table",
+        "widget_schema",
+        "general_doc"
+      ],
+      "default": "general_doc"
+    },
+    "widget_type": {
+      "type": "string",
+      "description": "For builder widget_schema capabilities: the Elementor/Divi widget type e.g. heading.default, button.default"
+    },
+    "native_properties": {
+      "type": "string",
+      "description": "JSON array of native property keys this widget/capability exposes for programmatic changes"
+    },
+    "identifier": {
+      "type": "string",
+      "description": "The capability path/key e.g. /wc/store/v3/products, woocommerce_currency, woocommerce_product_query"
+    },
+    "method": {
+      "type": "string",
+      "description": "HTTP method for REST endpoints (GET/POST/PUT/DELETE). Empty for non-endpoint types."
+    },
+    "description": {
+      "type": "string",
+      "description": "What this capability does, in plain English"
+    },
+    "required_params": {
+      "type": "string",
+      "description": "JSON array of required parameters for endpoints / option keys"
+    },
+    "example_usage": {
+      "type": "string",
+      "description": "Example JSON payload, option value, or code snippet showing how to use this capability"
+    },
+    "fix_guidance": {
+      "type": "string",
+      "description": "How FixPilot should use this capability when proposing fixes (change_type to use, target format, pitfalls)"
+    },
+    "confidence_score": {
+      "type": "number",
+      "default": 0.5,
+      "description": "0-1. Official docs = 1.0, vendor blog = 0.7, forum post = 0.4"
+    },
+    "source_url": {
+      "type": "string"
+    },
+    "source_type": {
+      "type": "string",
+      "enum": [
+        "official_docs",
+        "vendor_blog",
+        "github_issue",
+        "forum_post",
+        "llm_synthesized"
+      ],
+      "default": "official_docs"
+    },
+    "knowledge_depth": {
+      "type": "string",
+      "enum": [
+        "none",
+        "partial",
+        "comprehensive"
+      ],
+      "default": "partial"
+    },
+    "version_tested": {
+      "type": "string",
+      "description": "Plugin version this knowledge was verified against"
+    },
+    "last_ingested": {
+      "type": "string",
+      "format": "date-time"
+    }
+  },
+  "required": [
+    "plugin_slug",
+    "capability_type",
+    "identifier"
+  ]
+}

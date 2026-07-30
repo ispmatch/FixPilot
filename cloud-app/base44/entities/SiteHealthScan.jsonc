@@ -1,0 +1,48 @@
+{
+  "name": "SiteHealthScan",
+  "type": "object",
+  "properties": {
+    "domain_id": {
+      "type": "string"
+    },
+    "domain_name": {
+      "type": "string"
+    },
+    "scan_date": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "scanning",
+        "completed",
+        "error"
+      ],
+      "default": "scanning"
+    },
+    "progress": {
+      "type": "number",
+      "default": 0
+    },
+    "current_step": {
+      "type": "string"
+    },
+    "issues": {
+      "type": "string",
+      "description": "JSON array of issue objects with title, category, severity, description, fix_description, kb_search_query"
+    },
+    "total_issues": {
+      "type": "number",
+      "default": 0
+    },
+    "site_snapshot": {
+      "type": "string",
+      "description": "JSON snapshot of site environment at scan time"
+    }
+  },
+  "required": [
+    "domain_name",
+    "status"
+  ]
+}

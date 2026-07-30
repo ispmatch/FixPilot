@@ -1,0 +1,105 @@
+{
+  "name": "FixExecution",
+  "type": "object",
+  "properties": {
+    "domain_id": {
+      "type": "string"
+    },
+    "domain_name": {
+      "type": "string"
+    },
+    "user_email": {
+      "type": "string"
+    },
+    "fix_description": {
+      "type": "string"
+    },
+    "fix_category": {
+      "type": "string",
+      "enum": [
+        "css",
+        "settings",
+        "content",
+        "database",
+        "other"
+      ],
+      "default": "other"
+    },
+    "json_instruction": {
+      "type": "string"
+    },
+    "before_state": {
+      "type": "string"
+    },
+    "after_state": {
+      "type": "string"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "applied",
+        "reverted",
+        "failed"
+      ],
+      "default": "applied"
+    },
+    "verification_status": {
+      "type": "string",
+      "enum": [
+        "pending",
+        "passed",
+        "failed",
+        "manual",
+        "skipped"
+      ],
+      "default": "pending"
+    },
+    "verification_plan": {
+      "type": "string"
+    },
+    "verification_result": {
+      "type": "string"
+    },
+    "wp_version": {
+      "type": "string"
+    },
+    "plugin_versions": {
+      "type": "string"
+    },
+    "recipe_id": {
+      "type": "string"
+    },
+    "setup_fingerprint": {
+      "type": "string",
+      "description": "Hash of the site setup at time of fix \u2014 for matching similar setups"
+    },
+    "builder_type": {
+      "type": "string",
+      "enum": [
+        "elementor",
+        "divi",
+        "beaver_builder",
+        "brizy",
+        "siteorigin",
+        "thrust",
+        "gutenberg",
+        "unknown",
+        ""
+      ],
+      "default": "unknown"
+    },
+    "change_types_used": {
+      "type": "string",
+      "description": "JSON array of change_type strings used in this fix"
+    },
+    "theme_name": {
+      "type": "string",
+      "description": "Theme at time of fix"
+    }
+  },
+  "required": [
+    "domain_name",
+    "fix_description",
+    "status"
+  ]
+}

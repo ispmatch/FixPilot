@@ -1,0 +1,95 @@
+{
+  "name": "SiteSetupProfile",
+  "type": "object",
+  "properties": {
+    "domain_id": {
+      "type": "string"
+    },
+    "domain_name": {
+      "type": "string"
+    },
+    "platform": {
+      "type": "string",
+      "enum": [
+        "wordpress",
+        "shopify"
+      ],
+      "default": "wordpress",
+      "description": "Platform type \u2014 extensible for future Shopify support"
+    },
+    "setup_fingerprint": {
+      "type": "string",
+      "description": "Hash of builder+theme+wp_version+plugins for matching similar setups"
+    },
+    "theme_name": {
+      "type": "string"
+    },
+    "builder_type": {
+      "type": "string",
+      "enum": [
+        "elementor",
+        "divi",
+        "beaver_builder",
+        "brizy",
+        "siteorigin",
+        "thrust",
+        "gutenberg",
+        "unknown"
+      ],
+      "default": "unknown"
+    },
+    "stack_manifest": {
+      "type": "string",
+      "description": "JSON of the full structural site manifest: detected categories, Elementor widgets, Woo taxonomy, ACF fields, forms, CPTs. Populated by siteStackDiscovery."
+    },
+    "active_plugins": {
+      "type": "string",
+      "description": "JSON snapshot of plugins at profile creation"
+    },
+    "css_class_patterns": {
+      "type": "string",
+      "description": "JSON array of detected CSS classes from the live site"
+    },
+    "nav_structure": {
+      "type": "string",
+      "description": "JSON of navigation menu items detected"
+    },
+    "body_classes": {
+      "type": "string"
+    },
+    "wp_version": {
+      "type": "string"
+    },
+    "php_version": {
+      "type": "string"
+    },
+    "fixes_attempted": {
+      "type": "number",
+      "default": 0
+    },
+    "fixes_successful": {
+      "type": "number",
+      "default": 0
+    },
+    "fixes_failed": {
+      "type": "number",
+      "default": 0
+    },
+    "failed_approaches": {
+      "type": "string",
+      "description": "JSON array of {change_type, fix_description, reason} that failed on this setup"
+    },
+    "effective_approaches": {
+      "type": "string",
+      "description": "JSON array of {change_type, fix_description} that worked on this setup"
+    },
+    "last_updated": {
+      "type": "string",
+      "format": "date-time"
+    }
+  },
+  "required": [
+    "domain_name",
+    "builder_type"
+  ]
+}

@@ -1,0 +1,54 @@
+{
+  "sections": {
+    "wordpress_plugin": {
+      "description": "FixPilot WordPress plugin — PHP, CSS, JS for the AI assistant panel and admin dashboard",
+      "file_count": 10,
+      "files": [
+        "fixpilot.php",
+        "includes/class-rest-api.php",
+        "includes/class-fix-applier.php",
+        "includes/class-rollback.php",
+        "includes/class-panel.php",
+        "assets/css/panel.css",
+        "assets/js/panel.js",
+        "assets/css/admin-dashboard.css",
+        "assets/js/admin-dashboard.js",
+        "readme.txt"
+      ],
+      "version": "1.7.5"
+    },
+    "react_app": {
+      "description": "React + Tailwind CSS + Vite frontend — pages, components, hooks, utils, API client",
+      "file_count": 97,
+      "base_path": "cloud-app/src/"
+    },
+    "backend_functions": {
+      "description": "Deno Deploy backend functions — AI orchestrator, plugin update system, Stripe, vulnerability scanner, site health, knowledge ingester, etc.",
+      "file_count": 13,
+      "base_path": "cloud-app/base44/functions/"
+    },
+    "entity_schemas": {
+      "description": "Database entity schemas (JSON) — Domain, FixExecution, ChatSession, ChatMessage, FixRecipe, PluginCapability, SiteSetupProfile, SiteHealthScan, VulnerabilityScan, SiteAudit, StagedFix, NotificationChannel",
+      "file_count": 13,
+      "base_path": "cloud-app/base44/entities/"
+    },
+    "root_config": {
+      "description": "Build configuration, linting, project metadata",
+      "file_count": 12,
+      "files": [
+        "package.json",
+        "vite.config.js",
+        "tailwind.config.js",
+        "postcss.config.js",
+        "jsconfig.json",
+        "index.html",
+        "components.json",
+        ".gitignore",
+        "eslint.config.js",
+        "README.md",
+        "CLAUDE.md",
+        "AGENTS.md"
+      ]
+    }
+  }
+}

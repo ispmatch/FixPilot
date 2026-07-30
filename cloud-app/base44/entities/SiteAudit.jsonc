@@ -1,0 +1,65 @@
+{
+  "name": "SiteAudit",
+  "type": "object",
+  "properties": {
+    "domain_id": {
+      "type": "string"
+    },
+    "domain_name": {
+      "type": "string"
+    },
+    "audit_date": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "change_type": {
+      "type": "string",
+      "enum": [
+        "plugin_activated",
+        "plugin_deactivated",
+        "theme_change",
+        "file_modified",
+        "setting_changed",
+        "user_created",
+        "user_deleted",
+        "core_updated",
+        "other"
+      ],
+      "default": "other"
+    },
+    "description": {
+      "type": "string"
+    },
+    "diff_details": {
+      "type": "string",
+      "description": "JSON with before/after values or file diff"
+    },
+    "detected_by": {
+      "type": "string",
+      "enum": [
+        "plugin",
+        "scheduled_scan",
+        "manual"
+      ],
+      "default": "plugin"
+    },
+    "severity": {
+      "type": "string",
+      "enum": [
+        "info",
+        "warning",
+        "critical"
+      ],
+      "default": "info"
+    },
+    "acknowledged": {
+      "type": "boolean",
+      "default": false
+    }
+  },
+  "required": [
+    "domain_name",
+    "change_type",
+    "description"
+  ]
+}
